@@ -15,7 +15,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
             alert('Registration successful!');
             window.location.href = '/login';
         } else {
-          alert(`Registration failed: ${data.error}`);
+          alert('Registration failed');
         }
     }
 });

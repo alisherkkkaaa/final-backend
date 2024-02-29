@@ -53,18 +53,6 @@ app.get('/admin', (req, res) => {
    }
 })
 
-app.get('/moder', (req, res) => {
-   if (req.session.user) {
-      if(req.session.user.role == "moder"){
-         res.sendFile(__dirname + '/public/moder.html')
-      } else {
-         res.redirect('/login')
-      }
-   } else {
-      res.redirect('/login')
-   }
-})
-
 app.get('/logout', (req, res) => {
     req.session.destroy((err) => {
        if (err) {
