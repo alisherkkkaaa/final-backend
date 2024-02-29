@@ -1,0 +1,350 @@
+
+
+body{
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.nav {
+    display: flex;
+    height: 8vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    background-color: rgb(23, 23, 23);
+}
+
+.nav .logo {
+    padding: 0px 20px;
+}
+
+.nav .logo h1 {
+    color: white;
+    font-size: 30px;
+}
+
+.nav-menu a{
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+    font-size: 23px;
+    margin: 0px 20px;
+}
+
+.nav-menu a .active {
+    color: rgb(255, 0, 0);
+}
+
+.nav-menu a:hover {
+    color: white;
+}
+
+.user-profile{
+    padding: 0px 20px;
+}
+
+.user-profile a{
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    padding: 1px 5px;
+    transition: all 0.3s ease;
+}
+
+.user-profile a:hover{
+    background-color: white;
+    color: black;
+}
+
+.content {
+    background-color: rgb(1, 0, 29);
+    color: white;
+    font-family: monospace;
+    margin: 50px 100px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 4px 4px 8px 3px rgba(34, 60, 80, 0.2);
+}
+
+.content .user-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.content .user-content .pngg img{
+    width: 200px;
+    height: 200px;
+}
+
+.content .user-content .user-info .follower-following-button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: yellow;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.content .user-content .user-info .follower-following-button:hover {
+    border-bottom: 1px solid white;
+}
+
+.content .user-content .user-info h2 {
+    font-size: 30px;
+}
+
+.content .user-content .user-info p {
+    color: white;
+    font-size: 20px;
+}
+
+.content .user-content .user-info p span {
+    color: yellow;
+}
+
+.content .content-block {
+    width: 100%;
+}
+
+.content .post-block {
+    border: 1px solid white;
+    padding: 10px 20px;
+}
+
+.content .post-block h3{
+    font-size: 30px;
+}
+
+.content .post-block p {
+    font-size: 20px;
+}
+
+.content .post-block .edit-btn {
+    padding: 5px;
+    font-size: 15px;
+    background-color: greenyellow;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+.content .post-block .delete-btn {
+    padding: 5px;
+    font-size: 15px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+}
+
+.content .post-block .post-user-info{
+    font-size: 13px;
+    color: rgb(255, 255, 79);
+}
+
+
+table {
+    font-size: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgb(255, 255, 255); 
+}
+table td {
+    border: 1px solid rgb(255, 255, 255); 
+}
+table th {
+    border: 1px solid rgb(255, 255, 255); 
+}
+ 
+.content th {
+    padding: 10px;
+    
+}
+.content td {
+    padding: 10px;
+}
+.content table button {
+    border: none;
+    padding: 2px 5px;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 20px;
+    outline: none;
+    color: white;
+}
+
+.content table .edit-btn{
+    background-color: greenyellow;
+    color: black;
+}
+
+.content table .delete-btn{
+    background-color: red;
+}
+
+.modal-body {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 8px 3px rgba(34, 60, 80, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-input {
+    margin-bottom: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body .follow-button {
+    height: 30px;
+    width: 100px;
+}
+
+#allusersList button {
+    height: 30px;
+    width: 100px;
+}
+
+.modal-inputs {
+    padding: 5px;
+}
+
+.follow-item-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.modal-button {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 5px 0;
+}
+
+.close-btn {
+	overflow: hidden;
+	position: relative;
+	border: none;
+	padding: 0;
+	width: 2em; height: 2em;
+	border-radius: 50%;
+	background: transparent;
+	color: #000000;
+	font: inherit;
+	text-indent: 100%;
+	cursor: pointer;
+	
+	&:focus {
+		outline: solid 0 transparent;
+		box-shadow: 0 0 0 2px #8ed0f9
+	}
+	
+	&:hover {
+		background: rgba(29, 161, 142, .1)
+	}
+	
+	&:before, &:after {
+		position: absolute;
+		top: 15%; left: calc(50% - .0625em);
+		width: .125em; height: 70%;
+		border-radius: .125em;
+		transform: rotate(45deg);
+		background: currentcolor;
+		content: ''
+	}
+	
+	&:after { transform: rotate(-45deg); }
+}
+.acc-stng-btn {
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.add-content {
+    background-color: rgb(1, 0, 29);
+    color: white;
+    font-family: monospace;
+    margin: 50px 100px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 8px 3px rgba(34, 60, 80, 0.2);
+}
+
+.add-content .add-post {
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+    font-size: 30px;
+    transition: all 0.5s ease;
+}
+
+.add-content .add-post:hover {
+    background-color: rgb(0, 255, 30);
+    color: white;
+}
+
+.add-content .post-block{
+    border: 1px solid white;
+    padding: 10px 20px;
+}
+
+.add-content .post-block .post-user-info{
+    font-size: 10px;
+    color: rgb(255, 255, 79);
+}
+
+.add-content .post-block h3{
+    font-size: 30px;
+}
+
+.add-content .post-block p {
+    font-size: 20px;
+}
+
+.add-content .post-block .edit-btn {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 15px;
+    background-color: rgb(0, 241, 0);
+    color: black;
+    outline: none;
+    border: none;
+}
+
+.add-content .post-block .delete-btn {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 15px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+}
